@@ -92,12 +92,12 @@ if (flag == 1 ) // Se valida si se hicieron las operaciones
     if (factoreoA== -1){
         printf("No se puede factorizar un numero negativo\n");
     }else{
-    printf("El factorial de a es: %lld\n");
+    printf("El factorial de a es: %lld\n", factoreoA);
     }
     if(factoreoB== -1){
         printf("No se puede factorizar un numero negativo\n");
     }else{
-    printf("El factorial de b es: %lld\n");
+    printf("El factorial de b es: %lld\n", factoreoB);
     }
 }
 else{
