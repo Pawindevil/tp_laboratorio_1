@@ -22,9 +22,9 @@ typedef struct
     float salary;
     int sector;
     int isEmpty;
-} Empleado;
+} unEmpleado;
 
-int inItEmployees(Empleado list[], int len);
+int inItEmployees(unEmpleado list[], int len);
 /** \brief To indicate that all position in the array are empty,
  * this function put the flag (isEmpty) in TRUE in all position of the array
  * \param Empleado list[]
@@ -33,7 +33,7 @@ int inItEmployees(Empleado list[], int len);
  *
  */
 
-int buscarEspacio (Empleado list[], int len);
+int buscarEspacio (unEmpleado list[], int len);
 /** \brief busca si hay espacio en el array
  *
  * \param Empleado list[]
@@ -42,7 +42,7 @@ int buscarEspacio (Empleado list[], int len);
  *
  */
 
-void mostrarEmpleado(Empleado list);
+void mostrarEmpleado(unEmpleado list);
 /** \brief muestra los datos del empleado ingresado
  *
  * \param Empleado list[]
@@ -51,7 +51,7 @@ void mostrarEmpleado(Empleado list);
 
 
 
-int altaEmpleado(Empleado list[], int len, int espacio);
+int altaEmpleado(unEmpleado list[], int len, int espacio);
 
 /** \brief add in a existing list of employees the values received as parameters
  * in the first empty position
@@ -62,14 +62,14 @@ int altaEmpleado(Empleado list[], int len, int espacio);
 free space] - (0) if Ok
  */
 
-void confirmaAlta(Empleado list[]);
+void confirmarAlta(unEmpleado list[]);
 /** \brief agrega valores el array de alta
  *
  * \param Empleado list[]
  */
 
 
-int mostrarEmpleados(Empleado list[], int len);
+int mostrarEmpleados(unEmpleado list[], int len);
 /** \brief muestra el array de los empleados
  *
  * \param Empleado list[]
@@ -79,7 +79,7 @@ int mostrarEmpleados(Empleado list[], int len);
  */
 
 
-int generarID(Empleado list[], int len);
+int generarID(unEmpleado list[], int len);
 
 /** \brief va a generar un id para cada empleado ingresado
  *
@@ -89,13 +89,23 @@ int generarID(Empleado list[], int len);
  *
  */
 
+int validarId(unEmpleado list[], int len, int auxId);
+    /** \brief  funcion para validar  el id ingresado por el usuario
+     *
+     * \param unEmpleado list[]
+     * \param int len
+     * \param int auxId
+     * \return que se pudo o no validar
+     *
+     */
 
 
 
 
 
 
-int bajaEmpleado(Empleado list[], int len );
+
+int bajaEmpleado(unEmpleado list[], int len );
 
 /** \brief Remove a Employee by Id (put isEmpty Flag in 1)
  *
@@ -105,23 +115,40 @@ int bajaEmpleado(Empleado list[], int len );
 find a employee] - (1) if Ok
  *
  */
-void confirmaBaja(Empleado list[]);
+void confirmarBaja(unEmpleado list[]);
 /** \brief agrega los datos al array de baja
  *
  * \param Empleado list []
  *
  */
 
+int modificarEmpleado(unEmpleado list[], int len, int id, int opcion);
+/** \brief  elige empleado por id
+ *
+ * \param Empleado list []
+ * \param int len
+ * \param int id
+ * \param int opcion
+ * \return int empleado modificado
+ *
+ */
+
+void confirmarModificacion(unEmpleado list[]);
+/** \brief el usuario puede modificar empleados en sus 4 parametros
+ *
+ * \param Empleado list []
+ *
+ */
 
 
-void sueldoPromedioEmpleados(Empleado list[]);
+void sueldoPromedioEmpleados(unEmpleado list[]);
 /** \brief funcion que calcula promedio de los sueldos de los empleados
  *
  * \param Empleado list[]
  */
 
 
-void preguntarOrdenEmpleados(Empleado list[]);
+void preguntarOrdenEmpleados(unEmpleado list[]);
 /** \brief funcion para saber si quiere y como quiere ordenar el array el usuario
  *
  * \param  Empleado list[]
@@ -129,7 +156,7 @@ void preguntarOrdenEmpleados(Empleado list[]);
  */
 
 
-int ordenEmpleados(Empleado list[], int len, int criterio);
+int ordenEmpleados(unEmpleado list[], int len, int criterio);
 
 /** \brief Sort the elements in the array of employees, the argument order
 indicate UP or DOWN order
@@ -143,7 +170,7 @@ indicate UP or DOWN order
 
 
 
-int informarEmpleados(Empleado list[], int length);
+int informarEmpleados(unEmpleado list[], int length);
 
 /** \brief print the content of employees array
 *
@@ -153,7 +180,7 @@ int informarEmpleados(Empleado list[], int length);
 *
 */
 
-int cantidadEmpleados(Empleado list[], int len);
+int cantidadEmpleados(unEmpleado list[], int len);
 /** \brief funcion para saber cantidad de empleados ingresados
  *
  * \param Empleado list []
@@ -162,7 +189,7 @@ int cantidadEmpleados(Empleado list[], int len);
  *
  */
 
-float sumaSueldos (Empleado list[], int len);
+float sumaSueldos (unEmpleado list[], int len);
 /** \brief realiza la suma de los sueldos
  *
  * \param Empleado list[]
@@ -173,7 +200,7 @@ float sumaSueldos (Empleado list[], int len);
 
 
 
-float promedioSueldos (Empleado list[]);
+float promedioSueldos (unEmpleado list[]);
 /** \brief resuelve la operacion de promedios
  *
  * \param Empleado list[]
@@ -182,7 +209,7 @@ float promedioSueldos (Empleado list[]);
  */
 
 
-float masQueElPromedio(Empleado list[], int len, int promedio);
+float masQueElPromedio(unEmpleado list[], int len, int promedio);
 /** \brief funcion para mostrar cuantos empleados ganan mas que el promedio
  *
  * \param Empleado list[]
@@ -192,7 +219,7 @@ float masQueElPromedio(Empleado list[], int len, int promedio);
  *
  */
 
- void ordenSectorSueldos(Empleado list[]);
+ void ordenSectorSueldos(unEmpleado list[]);
  /** \brief muestro array de empleados ordenado
   *
   * \param Empleado list[]

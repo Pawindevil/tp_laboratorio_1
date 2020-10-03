@@ -1,7 +1,7 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
-#endif // FUNCIONES_H_INCLUDED
+
 
 int menu(char mensaje[]);
 /** \brief Ingreso de una opcion del menu
@@ -31,4 +31,14 @@ int intDeValidacion(char mensaje[], char error[], int minimo, int maximo);
  * \return int el dato ingresado por el usuario
  *
  */
+ void getS(char mensaje[], char string[]);
+ /** \brief ingreso de dato tipo cadena
+  *
+  * \param char mensaje[]
+  * \param char string[]
+  * \return void
+  *
+  */
 
+
+#endif // FUNCIONES_H_INCLUDED

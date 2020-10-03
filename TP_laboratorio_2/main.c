@@ -10,7 +10,7 @@ int main()
     int opcion;
 
 
-    Empleado list[LEN];
+    unEmpleado list[LEN];
 
     inItEmployees(list, LEN);
 
@@ -20,7 +20,7 @@ int main()
     {
 
         printf ("----------------------------------------Menu de empleados----------------------------------------\n\n\n");
-        printf ("1. Alta Empleado \n2. Modificar empleado\n3. Dar baja empleado\n4. Mostrar empleados\n");
+        printf ("1. Alta Empleado \n2. Modificar empleado\n3. Dar baja empleado\n4. Mostrar empleados\n5.Salir\n");
         opcion= menu("Ingrese opcion: \n");
 
 
@@ -29,21 +29,23 @@ int main()
         {
 
         case 1:
-            confirmaAlta(Empleado list);
+            confirmarAlta(list);
 
             break;
 
         case 2:
+        confirmarModificacion(list);
 
 
             break;
 
         case 3:
-            confirmaBaja(Empleado list);
+            confirmarBaja(list);
             break;
 
         case 4:
-            ordenSectorSueldos(Empleado list);
+            ordenSectorSueldos(list);
+
 
 
             break;
@@ -61,8 +63,8 @@ int main()
         }
         system ("cls");
         system ("pause"); // se limpia pantalla
-    }
-    while (opcion!=5 );  // termina la iteracion
+    }while (opcion!=5 );  // termina la iteracion
 
         return 0;
 }
+

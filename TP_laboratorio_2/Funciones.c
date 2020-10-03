@@ -21,11 +21,11 @@ void confirmacion (int espacio)
     switch(espacio)
     {
 
-    case 0:
+    case -1:
 
         printf("Error\n\n");
         break;
-    case 1:
+    case 0:
 
         printf ("Ejecucion exitosa!\n\n");
         break;
@@ -48,4 +48,12 @@ int intDeValidacion(char mensaje[], char error[], int minimo, int maximo)
 }
 
 
+void getS(char mensaje[], char string[])
+{
+
+
+    printf("%s", mensaje);
+    fflush(stdin);
+    scanf("%[^\n]", string);
+}
 
